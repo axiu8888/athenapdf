@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"github.com/arachnys/athenapdf/weaver/converter"
 	"github.com/satori/go.uuid"
 	"io"
 	"io/ioutil"
@@ -16,6 +15,7 @@ import (
 	"path/filepath"
 	"strings"
 	"time"
+	"weaver/converter"
 )
 
 type CloudConvert struct {

@@ -1,10 +1,10 @@
 package athenapdf
 
 import (
-	"github.com/arachnys/athenapdf/weaver/converter"
-	"github.com/arachnys/athenapdf/weaver/gcmd"
 	"log"
 	"strings"
+	"weaver/converter"
+	"weaver/gcmd"
 )
 
 // AthenaPDF represents a conversion job for athenapdf CLI.

@@ -3,7 +3,6 @@ package main
 import (
 	"context"
 	"github.com/DeanThompson/ginpprof"
-	"github.com/arachnys/athenapdf/weaver/converter"
 	"github.com/getsentry/raven-go"
 	"github.com/gin-gonic/contrib/sentry"
 	"github.com/gin-gonic/gin"
@@ -15,6 +14,7 @@ import (
 	"os/signal"
 	"syscall"
 	"time"
+	"weaver/converter"
 )
 
 // InitMiddleware sets up the necessary middlewares for the microservice.
@@ -85,7 +85,7 @@ func InitSimpleRoutes(router *gin.Engine, conf Config) {
 func StartX() {
 	cmd := exec.Command("Xvfb", ":99", "-ac", "-screen", "0", "1024x768x24")
 	cmd.SysProcAttr = &syscall.SysProcAttr{
-		Setpgid: true,
+		//Setpgid: true, // TODO
 	}
 	err := cmd.Run()
 	log.Fatal("Xvfb exited:", err)

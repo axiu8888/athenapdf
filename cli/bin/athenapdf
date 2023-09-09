@@ -12,5 +12,6 @@ spawn(electron, args, {
     stdio: "inherit",
     cwd: path.resolve(process.cwd())
 }).on('close', (code) => {
-    process.exit(code);
+    //process.exit(code);
+    console.log('code =>: ' + code);
 });

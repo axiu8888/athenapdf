@@ -1,12 +1,12 @@
 package athenapdf
 
 import (
-	"github.com/arachnys/athenapdf/weaver/converter"
-	"github.com/arachnys/athenapdf/weaver/testutil"
 	"io/ioutil"
 	"path/filepath"
 	"reflect"
 	"testing"
+	"weaver/converter"
+	"weaver/testutil"
 )
 
 func TestConstructCMD(t *testing.T) {

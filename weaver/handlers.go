@@ -2,9 +2,6 @@ package main
 
 import (
 	"errors"
-	"github.com/arachnys/athenapdf/weaver/converter"
-	"github.com/arachnys/athenapdf/weaver/converter/athenapdf"
-	"github.com/arachnys/athenapdf/weaver/converter/cloudconvert"
 	"github.com/aws/aws-sdk-go/aws/awserr"
 	"github.com/getsentry/raven-go"
 	"github.com/gin-gonic/gin"
@@ -14,6 +11,9 @@ import (
 	"os"
 	"runtime"
 	"time"
+	"weaver/converter"
+	"weaver/converter/athenapdf"
+	"weaver/converter/cloudconvert"
 )
 
 var (

@@ -2,7 +2,6 @@ package converter
 
 import (
 	"bytes"
-	"github.com/arachnys/athenapdf/weaver/testutil"
 	"io/ioutil"
 	"net/url"
 	"os"
@@ -10,6 +9,7 @@ import (
 	"reflect"
 	"strings"
 	"testing"
+	"weaver/testutil"
 )
 
 func expectLocalConversion(t *testing.T, s *ConversionSource, uri string, mime string, data []byte) {

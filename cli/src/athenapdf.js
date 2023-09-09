@@ -54,6 +54,7 @@ athena
     .action((uri, output) => {
         uriArg = uri;
         outputArg = output;
+        console.log('URI =>: ' + uri);
     })
     .parse(process.argv);
 
