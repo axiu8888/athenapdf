@@ -1,5 +1,5 @@
-FROM debian:8.7
-MAINTAINER Arachnys <techteam@arachnys.com>
+FROM debian:12
+MAINTAINER Arachnys <dingxiuan@163.com>
 
 RUN echo 'deb http://httpredir.debian.org/debian/ stable main contrib non-free' >> /etc/apt/sources.list
 

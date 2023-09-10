@@ -16,21 +16,22 @@
     "url": "https://github.com/arachnys/athenapdf/issues"
   },
   "license": "MIT",
-  "author": "Ian Lai <ian@arachnys.com>",
-  "main": "athenapdf.js",
-  "bin": "./bin/athenapdf",
+  "author": "Ian Lai <dingxiuan@163.com>",
+  "main": "main.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/arachnys/athenapdf.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
     "clean": "rm -rf build",
-    "build": "npm run clean && npm run build:prepare && npm run build:linux",
-    "build:prepare": "mkdir -p ./build && cp -r src/ ./build/artifacts/ && cp package.json ./build/artifacts/ && cd ./build/artifacts/ && npm i --production",
-    "build:linux": "electron-packager build/artifacts/ athenapdf --platform=linux --arch=x64 --version=3.0.5 --out=build/ --overwrite --asar=true",
-    "build:win_x32": "electron-packager build/artifacts/ athenapdf --win32 --arch=ia32 --out ./build/ --overwrite --app-version=1.0.0 --icon=./favicon.ico --asar",
-    "build:win_x64": "electron-packager build/artifacts/ athenapdf --win32 --arch=x64 --out ./build/ --overwrite --app-version=1.0.0 --icon=./favicon.ico --asar"
+    "build": "npm run build:prepare && npm run build:linux",
+    "build:clean": "npm run clean && npm run build:prepare && npm run build:linux",
+    "build:prepare": "mkdir -p build && cp -r src/ build/artifacts/ && cp package.json build/artifacts/ && cd build/artifacts/ && npm i && cd ...",
+    "build:linux": "electron-packager build/artifacts/ athenapdf --platform=linux --arch=x64 --out build/ --overwrite --app-version=1.0.0 --icon=favicon.ico --asar",
+    "build:win_x32": "electron-packager build/artifacts/ athenapdf --win32 --arch=ia32 --out build/ --overwrite --app-version=1.0.0 --icon=favicon.ico --asar",
+    "build:win_x64": "electron-packager build/artifacts/ athenapdf --win32 --arch=x64 --out build/ --overwrite --app-version=1.0.0 --icon=favicon.ico --asar"
   },
   "dependencies": {
     "commander": "^11.0.0",

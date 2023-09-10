@@ -1,5 +1,6 @@
 
-cli/build/
+/cli/package-lock.json
+/cli/build/
 ### Ionic3 template
 # Log an tmp data
 *~

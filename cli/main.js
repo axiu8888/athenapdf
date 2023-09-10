@@ -5,7 +5,7 @@ const spawn = require("child_process").spawn;
 const electron = require("electron");
 
 var args = process.argv.slice(2);
-var src = path.resolve(path.join(__dirname, "/../src/athenapdf.js"));
+var src = path.resolve(path.join(__dirname, "src/athenapdf.js"));
 args.unshift(src);
 
 spawn(electron, args, {
